@@ -22,7 +22,7 @@ class PlanSecondEdit extends GetView<StartItemLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.gmcdph.value)),
+              url: WebUri.uri(Uri.parse(controller.yqopfmwg.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

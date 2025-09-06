@@ -10,8 +10,8 @@ class StartItemView extends GetView<StartItemLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.huels.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.huel.value
+              ? CircularProgressIndicator(color: Colors.redAccent[100])
               : buildError(),
         ),
       ),
@@ -25,7 +25,7 @@ class StartItemView extends GetView<StartItemLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.jrvsn();
+              controller.alhfu();
             },
             icon: const Icon(
               Icons.restart_alt,

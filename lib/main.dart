@@ -8,6 +8,7 @@ import 'package:customized_plan/pages/fourth_item/fourth_item_view.dart';
 import 'package:customized_plan/pages/plan_first/plan_first_binding.dart';
 import 'package:customized_plan/pages/plan_first/plan_first_view.dart';
 import 'package:customized_plan/pages/plan_second/plan_second_binding.dart';
+import 'package:customized_plan/pages/plan_second/plan_second_edit.dart';
 import 'package:customized_plan/pages/plan_second/plan_second_view.dart';
 import 'package:customized_plan/pages/plan_tab/plan_tab_binding.dart';
 import 'package:customized_plan/pages/plan_tab/plan_tab_view.dart';
@@ -15,6 +16,8 @@ import 'package:customized_plan/pages/plan_third/plan_third_binding.dart';
 import 'package:customized_plan/pages/plan_third/plan_third_view.dart';
 import 'package:customized_plan/pages/second_item/second_item_binding.dart';
 import 'package:customized_plan/pages/second_item/second_item_view.dart';
+import 'package:customized_plan/pages/start_item/start_item_binding.dart';
+import 'package:customized_plan/pages/start_item/start_item_view.dart';
 import 'package:customized_plan/pages/third_item/third_item_binding.dart';
 import 'package:customized_plan/pages/third_item/third_item_view.dart';
 import 'package:flutter/material.dart';
@@ -71,7 +74,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Plans,
-      initialRoute: isMain ==  true ? '/plan_tab' : '/first_item',
+      initialRoute: '/',
       theme: ThemeData(
           useMaterial3: true,
           primaryColor: primaryColor,
@@ -107,12 +110,14 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Plans = [
+  GetPage(name: '/', page: () => StartItemView(),binding: StartItemBinding(),),
   GetPage(name: '/first_item', page: () => FirstItemPage(),binding: FirstItemBinding(),),
   GetPage(name: '/second_item', page: () => SecondItemPage(),binding: SecondItemBinding(),),
   GetPage(name: '/third_item', page: () => ThirdItemPage(),binding: ThirdItemBinding(),),
   GetPage(name: '/fourth_item', page: () => FourthItemPage(), binding: FourthItemBinding()),
   GetPage(name: '/fiveth_item', page: () => FivethItemPage(),binding: FivethItemBinding(),),
   GetPage(name: '/plan_tab', page: () => PlanTabPage(),binding: PlanTabBinding(),),
+  GetPage(name: '/plan_edit', page: () => PlanSecondEdit()),
   GetPage(name: '/plan_first', page: () => const PlanFirstPage(),binding: PlanFirstBinding(),),
   GetPage(name: '/plan_second', page: () => PlanSecondPage(),binding: PlanSecondBinding(),),
   GetPage(name: '/plan_third', page: () => PlanThirdPage(),binding: PlanThirdBinding(),),
